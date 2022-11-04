@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="contact_access_management">
+        <field name="name">Contact Access Management</field>
+        <field name="sequence">20</field>
+    </record>
+    <record id="salesperson" model="res.groups">
+        <field name="name">Salesperson</field>
+        <field name="category_id" ref="contact_access_management" />
+    </record>
+</odoo>

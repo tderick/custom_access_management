@@ -1,0 +1,48 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* custom_access_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20221025\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:23+0000\n"
+"PO-Revision-Date: 2022-11-04 10:25+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: custom_access_management
+#: model:ir.model,name:custom_access_management.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: custom_access_management
+#: model:ir.module.category,name:custom_access_management.custom_access_management
+msgid "Contact Access Management"
+msgstr "Gestion d'accès aux contacts"
+
+#. module: custom_access_management
+#: model:ir.model.fields,field_description:custom_access_management.field_res_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: custom_access_management
+#: model:ir.model.fields,field_description:custom_access_management.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: custom_access_management
+#: model:ir.model.fields,field_description:custom_access_management.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: custom_access_management
+#: model:res.groups,name:custom_access_management.salesperson
+msgid "Salesperson"
+msgstr "Commercial"
