@@ -12,13 +12,20 @@ class PartnerExtend(models.Model):
     @api.model
     def search_read(self, domain=None, fields=None, offset=0, limit=None, order=None):
 
-        # Get the list of users groups
-        user_groups = self.env.user.groups_id
-        salesperson_group = self.env['res.groups'].with_context(lang='en_US').search(
-            [('name', 'like', 'Salesperson')])
+        # Get the connected user
+        connected_user = self.env.user
 
-        if salesperson_group in user_groups:
-            domain += [("create_uid", '=', self.env.user.id)]
+        # Get all the sales teams
+        sales_teams = self.env['crm.team'].search([("active", '=', True)])
+
+        for team in sales_teams:
+
+            # Test if the connected user is a Team Lead
+            if connected_user in team.member_ids and connected_user == team.user_id:
+                domain += [("create_uid", 'in',
+                            [user.id for user in team.member_ids])]
+            elif connected_user in team.member_ids:
+                domain += [("create_uid", '=', connected_user.id)]
 
         res = super(PartnerExtend, self).search_read(
             domain, fields, offset, limit, order)

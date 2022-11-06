@@ -23,11 +23,11 @@
     'licence': 'LGPL-3',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'crm'],
 
     # always loaded
     'data': [
-        'security/groups.xml'
+        # 'security/groups.xml'
         # 'security/ir.model.access.csv',
         # 'views/views.xml',
         # 'views/templates.xml',
