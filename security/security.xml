@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="type_salesperson">
+        <field name="name">Type de Commercial</field>
+        <field name="sequence">20</field>
+    </record>
+    <record id="internal_salesperson" model="res.groups">
+        <field name="name">Commercial Externe</field>
+        <field name="category_id" ref="type_salesperson" />
+    </record>
+</odoo>
