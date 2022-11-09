@@ -9,6 +9,9 @@ logger = logging.getLogger(__name__)
 class CRMTeamExtend(models.Model):
     _inherit = "crm.team"
 
+    products_category_ids = fields.Many2many(
+        "product.category", string="Categories de produits vendus")
+
     @api.model
     def _name_search(self, name, args=None, operator="ilike", limit=100, name_get_uid=None):
         args = args or []

@@ -25,7 +25,9 @@ class CRMLeadExtend(models.Model):
                 domain += [("create_uid", 'in',
                             [user.id for user in team.member_ids])]
             elif connected_user in team.member_ids:
-                domain += [("create_uid", '=', connected_user.id)]
+                # if the connected user is not a team member and is the person who create the opportunity of is the saleperson of the opportunity
+                domain += ['|', ("create_uid", '=', connected_user.id),
+                           ("user_id", '=', connected_user.id)]
 
         res = super(CRMLeadExtend, self).search_read(
             domain, fields, offset, limit, order)

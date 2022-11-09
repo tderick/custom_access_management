@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="sales_team_form_view_in_crm_extended" model="ir.ui.view">
+            <field name="name">Equipes commercial: Ajout du champ *Categories de produits vendus*</field>
+            <field name="model">crm.team</field>
+            <field name="inherit_id" ref="crm.sales_team_form_view_in_crm" />
+
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="products_category_ids" widget="many2many_tags" />
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
+        
